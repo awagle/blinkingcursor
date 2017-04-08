@@ -1,0 +1,14 @@
+version: '2'
+services:
+  nexus-data:
+    image: sonatype/nexus3
+    entrypoint:
+    - /bin/true
+  nexus:
+    image: sonatype/nexus3
+    volumes_from:
+    - nexus-data
+    depends_on:
+    - nexus-data
+    ports:
+    - "8081:8081"
