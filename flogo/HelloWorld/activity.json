@@ -1,0 +1,19 @@
+{
+  "name": "awagle-helloworld",
+  "version": "0.0.1",
+  "type": "flogo:activity",
+  "description": "Simple Hello World",
+  "author": "Your Name <awagle@tibco.com>",
+  "inputs":[
+    {
+      "name": "input",
+      "type": "string"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "output",
+      "type": "string"
+    }
+  ]
+}
