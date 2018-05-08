@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "type": "flogo:activity",
   "description": "Simple Hello World",
-  "author": "Your Name <awagle@tibco.com>",
+  "author": "Aditya Wagle <awagle@tibco.com>",
+  "ref":"github.com/awagle/blinkingcursor/flogo/hello",
   "inputs":[
     {
       "name": "input",
