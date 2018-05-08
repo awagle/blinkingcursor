@@ -47,11 +47,11 @@ func TestEval(t *testing.T) {
 
 	act := NewActivity(getActivityMetadata())
 	tc := test.NewTestActivityContext(getActivityMetadata())
-
+	tc.SetInput("input", "Aditya")
 	//setup attrs
 
 	act.Eval(tc)
 	result := tc.GetOutput("output")
-	assert.Equal(t, result, "Helloworld")
+	assert.Equal(t, result, "Hello, Aditya")
 	//check result attr
 }
