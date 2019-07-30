@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bookstore-consumption
+spec:
+  selector:
+    matchLabels:
+      app: bookstore-consumption
+  template:
+    metadata:
+      labels:
+        app: bookstore-consumption
+      annotations:
+        linkerd.io/inject: enabled
+    spec:
+      containers:
+      - name: bookstore-consumption
+        image: bookstore-consumption:2.4.4
+        imagePullPolicy: Never
+        envFrom:
+          - configMapRef:
+              name: bookstore-consumption
+        readinessProbe:
+          httpGet:
+            path: /_ping
+            port: 7777
